@@ -1,16 +1,25 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
+html, body {   
+    background-image: url('https://en.wikipedia.org/wiki/Among_Us#/media/File:Among_Us_cover_art.jpg');
+    background-color: #cccccc;
+}
+
 <!- This variable sets name of browser tab  -->
 {% set project = "Stubby" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
+<body>
     <div class="px-5 py-5 mx-auto">
         <h1 class="text-primary"><strong>Amogus Body</strong></h1>
         <p class="text-secondary">your name here</p>
     </div>
+</body>
+
+    
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
