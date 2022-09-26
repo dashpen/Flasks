@@ -1,27 +1,43 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
-html, body {   
-    background-image: url('https://en.wikipedia.org/wiki/Among_Us#/media/File:Among_Us_cover_art.jpg');
-    background-color: #cccccc;
-}
-
 <!- This variable sets name of browser tab  -->
 {% set project = "Stubby" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
-<body>
+
+<style>
+html, body {   
+    background-image: url('https://en.wikipedia.org/wiki/Among_Us#/media/File:Among_Us_cover_art.jpg');
+    /* background-color: black; */
+}
+ .mDiv{
+    margin:100px
+}
+</style>
+<body style="background-image: url('https://en.wikipedia.org/wiki/Among_Us#/media/File:Among_Us_cover_art.jpg')">
     <div class="px-5 py-5 mx-auto">
         <h1 class="text-primary"><strong>Amogus Body</strong></h1>
         <p class="text-secondary">your name here</p>
+    </div>
+    <div class = "mDiv">
+        <p>Are You Sus?</p>
+        <img id="thing" src='https://upload.wikimedia.org/wikipedia/commons/a/af/Question_mark.png' width="200px" height="200px">
+        <p id="thing2" style="visibility: hidden">you ARE sus!!!</p>
+        <script>
+            document.getElementById("thing").onclick = function mlf(){
+                thing.src = 'https://pioneeroptimist.com/wp-content/uploads/2021/03/among-us-6008615_1920-838x900.png';
+                thing2.style.visibility = "visible";
+            }
+        </script>
     </div>
 </body>
 
     
 {% endblock %}
 
-<!- This is turning off birds background from base.html -->
+<!-- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
